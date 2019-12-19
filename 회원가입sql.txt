@@ -1,0 +1,24 @@
+ CREATE TABLE MEMBER (
+	id         VARCHAR2(20)   NOT NULL, -- 회원(관리자) 아이디
+	name       VARCHAR2(20)   NOT NULL, -- 회원 이름
+	pass       VARCHAR2(64)   NOT NULL, -- 회원 비밀번호
+	tel        VARCHAR2(30)   NULL,     -- 회원 전화번호
+	email      VARCHAR2(100)  NOT NULL, -- 회원 메일
+	favorite   VARCHAR2(100)  NULL,     -- 선호지역
+	admin      number         NOT NULL, -- 관리자여부
+	theme      VARCHAR2(100)  NULL,     -- 테마
+	regdate  DATE          DEFAULT sysdate  NOT NULL, -- 계정등록일
+	lastdate DATE           DEFAULT sysdate NOT NULL,  -- 마지막접속일
+	reserv_num VARCHAR2(1000) NULL      -- 예약번호
+)
+CREATE TABLE BUSINESS (
+	b_id       VARCHAR2(20)  NOT NULL, -- 사업자 아이디
+	b_number   VARCHAR2(20)  NOT NULL, -- 사업자 등록번호
+	b_name     VARCHAR2(20)  NOT NULL, -- 사업자 이름
+	b_pass     VARCHAR2(100) NOT NULL, -- 사업자 비밀번호
+	b_tel      VARCHAR2(30)  NULL,     -- 사업자 전화번호
+	b_email    VARCHAR2(100) NOT NULL, -- 사업자 메일
+	b_rating   number        NOT NULL, -- 사업자 평점
+	b_regdate  DATE         DEFAULT sysdate NOT NULL ,-- 계정 등록일
+	b_lastdate DATE         DEFAULT sysdate NOT NULL  -- 마지막 접속일
+)
